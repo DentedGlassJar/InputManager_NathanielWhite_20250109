@@ -15,9 +15,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Grow",
                     "type": "Button",
                     "id": "a9aa1ddf-98eb-49ec-aa13-78e9eaadd214",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Disappear",
+                    "type": "Button",
+                    "id": "64e685bf-7b8c-4ed8-82a7-e07ce70b09e7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -28,18 +37,7 @@
                 {
                     "name": "",
                     "id": "e837121c-8ddb-4cec-ac4c-2c56e3234599",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fe128068-8397-49a5-80fb-68b0d279029b",
-                    "path": "",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -50,11 +48,22 @@
                 {
                     "name": "",
                     "id": "efe5bbe9-e134-4be9-9c56-811f0d09fe28",
-                    "path": "",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Grow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30ae2412-f228-4948-ad23-d5797ee118bc",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Disappear",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
