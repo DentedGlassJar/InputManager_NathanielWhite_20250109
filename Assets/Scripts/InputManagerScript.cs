@@ -29,25 +29,55 @@ public class InputManagerScript : MonoBehaviour, GameInput.IGameplayActions
     // Method used for invoking the jumpEvent when the "Q" button is pressed 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if (context.started)
         {
             Actions.jumpEvent?.Invoke();
-        }    
-    }
+        }
 
-    // Method used for invoking the growEvent when the "W" button is pressed 
-    public void OnGrow(InputAction.CallbackContext context)
-    {
         if (context.performed)
         {
-            Actions.growEvent?.Invoke();
+            Actions.spinEvent?.Invoke();
+        }
+
+        if (context.canceled)
+        {
+            Actions.fallEvent?.Invoke();
         }
     }
 
-    // Method used for invoking the disappearEvent when the "E" button is pressed 
+    // Method used for invoking the events for the Cylinder when the "W" button is pressed 
+    public void OnGrow(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Actions.squashEvent?.Invoke();
+        }
+
+        if (context.performed)
+        {
+            Actions.stretchEvent?.Invoke();
+        }
+
+        if (context.canceled)
+        {
+            Actions.turnToNormalEvent?.Invoke();
+        }
+    }
+
+    // Method used for invoking the Events for the Sphere when the "E" button is released 
     public void OnDisappear(InputAction.CallbackContext context)
     {
+        if (context.started)
+        {
+            Actions.greenEvent?.Invoke();
+        }
+        
         if (context.performed)
+        {
+            Actions.yellowEvent?.Invoke();
+        }
+        
+        if (context.canceled)
         {
             Actions.disappearEvent?.Invoke();
         }

@@ -224,7 +224,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4, y: 1, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1110196681}
@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 549671688}
   - component: {fileID: 549671687}
   - component: {fileID: 549671686}
+  - component: {fileID: 549671690}
   m_Layer: 0
   m_Name: Cube_Object
   m_TagString: Untagged
@@ -334,37 +335,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1110196681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &800552171
-GameObject:
+--- !u!95 &549671690
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 800552172}
-  m_Layer: 0
-  m_Name: Text Parent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &800552172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800552171}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 549671685}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ba61997f1851e1d48a09252f7bd3ab27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &886788958
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ab3c3095ef6c5140aaf7273aedeb708, type: 2}
+  - {fileID: 2100000, guid: 8ee3a4eea6e5e2a4b8da491ec8d7dc51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -746,7 +737,7 @@ GameObject:
   - component: {fileID: 1787404648}
   - component: {fileID: 1787404647}
   m_Layer: 0
-  m_Name: Cube_Text
+  m_Name: Instructional_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,6 +928,9 @@ MonoBehaviour:
   cubeObject: {fileID: 549671685}
   cylinderObject: {fileID: 505745325}
   sphereRenderer: {fileID: 886788960}
+  cubeAnimator: {fileID: 549671690}
+  matGreen: {fileID: 0}
+  matYellow: {fileID: 2100000, guid: 7d9d7133c792e174ba3db86086205eae, type: 2}
   matTransparent: {fileID: 2100000, guid: 687ac4b0e440e72428eff8db23f2d595, type: 2}
 --- !u!4 &2048774759
 Transform:
@@ -963,4 +957,3 @@ SceneRoots:
   - {fileID: 903683144}
   - {fileID: 1110196681}
   - {fileID: 1787404649}
-  - {fileID: 800552172}
